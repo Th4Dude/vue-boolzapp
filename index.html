@@ -35,13 +35,13 @@
                                 <img class="img" src="img/avatar_2.jpg" alt="">
                             </div>
                             <div>
-                                <h6>The dude</h6>
+                                <h4>The dude</h4>
                             </div>
                         </div>
                         <div class="flex  justify-content-spacebetween icons">
-                            <span><i class="fa-solid fa-circle-notch"></i></span>
-                            <span><i class="fa-solid fa-message"></i></span>
-                            <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                            <span class="paddingleft-5"><i class="fa-solid fa-circle-notch"></i></span>
+                            <span class="paddingleft-5"><i class="fa-solid fa-message"></i></span>
+                            <span class="paddingleft-5"><i class="fa-solid fa-ellipsis-vertical"></i></span>
                         </div>
                     </div>
                     <div class="container_img_notification">
@@ -50,23 +50,31 @@
                             <h5>Ricevi notifiche di nuovi messaggi</h5>
                             <a href="">Attiva notifiche desktop</a>
                         </div>
-
-
-
-
-
                     </div>
                     <div class="container_input flex">
 
-                        <div class="container_btn flex "><button class="btn"><i class="fa-solid fa-magnifying-glass"></i></button></div>
+                        <div class="container_btn flex "><button class="btn"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button></div>
 
                         <div class="input_header">
                             <input type="text" placeholder="Cerca o inizia una nuova chat">
-                          </div>
-
+                        </div>
                     </div>
                 </div>
-                <div class="container_contacts">Contact</div>
+                <div v-for="contacts" class="container_contacts">
+                    <div class="container_utente">
+                        <div class="utente">
+                            <div>
+                                <img class="img" src="img/avatar_2.jpg" alt="">
+                            </div>
+                            <div>
+                                <h4>The dude</h4>
+                                <h6>Ultimo messaggio invitato</h6>
+                            </div>
+                        </div>
+                        <div><h6>12.00</h6></div>
+                    </div>
+                </div>
             </div>
 
             <!-- Sidebar -->
@@ -80,7 +88,7 @@
                             <img class="img" src="img/avatar_2.jpg" alt="">
                         </div>
                         <div>
-                            <h6>Nome</h6>
+                            <h4>PincoPallino</h4>
                         </div>
                     </div>
                     <div class="flex  justify-content-spacebetween icons_right">
@@ -100,7 +108,7 @@
                     </div>
                     <div class="input_footer">
                         <input type="text" placeholder="Scrivi un messaggio">
-                      </div>
+                    </div>
                     <div class="icons_footer">
                         <span><i class="fa-solid fa-microphone"></i></span>
                     </div>

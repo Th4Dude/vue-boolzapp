@@ -12,8 +12,9 @@
 
 body {
     overflow: hidden;
-    background-color: #0093E9;
-    background-image: linear-gradient(180deg, #0093E9 0%, #a19d9d 33%, #ffffff 66%, #ffffff 100%);
+    background-color: #159588;
+    background-image: linear-gradient(180deg, #159588 0%, #d3dbdb 33%, #d3dbdb 66%, #d3dbdb 100%);
+    
 }
 
 .container {
@@ -45,7 +46,12 @@ body {
     width: 50px;
     border-radius: 50px;
 }
-
+.paddingleft-5{
+    padding-left: 5px;
+}
+.paddingright-5{
+    padding-right: 5px;
+}
 /* Common */
 /* -------------------------------------------------------------------- */
 /* Sidebar */
@@ -77,13 +83,12 @@ body {
 }
 
 .container_contacts {
-    background-color: blueviolet;
+    background-color: white;
     height: calc(100% - 140px);
 }
 
 .icons {
     width: 20%;
-    padding: 0 .625rem;
     color: #b1b1b1;
 }
 
@@ -110,13 +115,22 @@ body {
     border-radius: .625rem;
     border: 1px solid lightgray;
     background-color: #fafafa;
-
 }
 
 .input_header {
     width: 80%;
     border: 1px solid lightgray;
     border-radius: .625rem;
+}
+.container_utente{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.utente{
+    display: flex;
+    align-items: center;
 }
 
 /* Sidebar */
