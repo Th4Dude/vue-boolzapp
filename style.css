@@ -3,3 +3,35 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+/* Common */
+.flex{
+    display: flex;
+}
+
+
+
+.container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 25%;
+    height: 90vh;
+    background-color: lightgray;
+    padding: 20px;
+  }
+  
+  .main-content {
+    width: 75%;
+    padding: 20px;
+  }
+  .container_img_notification{
+    background-color: bisque;
+  }
+  .container_input{
+    background-color: aqua;
+  }
+  .container_contacts{
+    background-color: blueviolet;
+  }

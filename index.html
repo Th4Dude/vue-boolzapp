@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,17 +8,50 @@
     <title>Document</title>
 
     <!-- Fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Fontawesome -->
 
     <!-- Stylecss -->
     <link rel="stylesheet" href="style.css">
     <!-- Stylecss -->
 </head>
+
 <body>
 
     <!-- Vue Box -->
-    <div id="app">{{ message }}</div>
+    <div id="app">
+        <div class="container">
+            <div class="sidebar">
+                <div class="header_sidebar">
+                    <div class="container_profile flex">
+                        <div>
+                            <img src="img/avatar_2.jpg" alt="">
+                            <h6>Nome</h6>
+                        </div>
+                        <div>fontawesome</div>
+                    </div>
+                    <div class="container_img_notification">Immagine-Notifiche</div>
+                    <div class="container_input">Cerca e input</div>
+                </div>
+                <div class="container_contacts">Contact</div>
+            </div>
+            <div class="main-content">
+                <div class="main_header">
+                    <div><img src="" alt="">immagine
+                        <h6>Nome</h6>
+                    </div>
+                </div>
+                <div class="container_main_msg">
+                    <h1>Contenuto Principale</h1>
+                </div>
+                <div class="footer">
+                    <p>footer</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Vue Box -->
 
 
@@ -27,9 +61,10 @@
     <!-- Vue -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- Vue -->
-    
+
     <!-- Js -->
     <script src="js/main.js"></script>
     <!-- Js -->
 </body>
+
 </html>
