@@ -26,12 +26,13 @@ body {
 .flex {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .justify-content-spacebetween {
     display: flex;
     justify-content: space-between;
-    
+
 }
 
 .justify-content-spacearound {
@@ -58,28 +59,66 @@ body {
 
 .container_profile {
     height: 3.75rem;
-    background-color: aqua;
+    background-color: #eaeaea;
 }
 
 .container_img_notification {
-    background-color: bisque;
-    height: 2.5rem;
+    background-color: #91dafa;
+    height: 3.75rem;
+    display: flex;
+    align-items: center;
+    padding: 10px;
 }
 
 .container_input {
-    background-color: aqua;
+    background-color: #fafafa;
+    width: 100%;
     height: 2.5rem;
 }
 
 .container_contacts {
     background-color: blueviolet;
-    height: calc(100% - 120px);
+    height: calc(100% - 140px);
 }
-.icons{
+
+.icons {
     width: 20%;
     padding: 0 .625rem;
-    color: grey;
+    color: #b1b1b1;
 }
+
+.container_bell {
+    background-color: #fafafa;
+    color:  #91dafa;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+}
+
+.container_btn {
+    width: 10%;
+    margin-left: .9375rem;
+
+}
+
+.btn {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: .625rem;
+    border: 1px solid lightgray;
+    background-color: #fafafa;
+
+}
+
+.input_header {
+    width: 80%;
+    border: 1px solid lightgray;
+    border-radius: .625rem;
+}
+
 /* Sidebar */
 /* -------------------------------------------------------------------- */
 /* Main right */
@@ -89,25 +128,28 @@ body {
     height: 98%;
     padding-top: 20px;
 }
+
 .main_header {
     height: 3.75rem;
-    background-color: cornflowerblue;
+    background-color: #eaeaea;
 }
+
 .container_main_msg {
     background-image: url(img/mine.jpg);
     height: calc(100% - 120px);
 }
+
 .footer {
-    background-color: gainsboro;
+    background-color: #f3eeea;
     height: 3.75rem;
 }
 
 /* header main */
 
-.icons_right{
+.icons_right {
     width: 10%;
     padding: 0 .625rem;
-    color: grey;
+    color: #b1b1b1;
 }
 
 /* header main */
@@ -118,18 +160,24 @@ body {
 
 /* footer */
 
-  .input_footer{
+.input_footer {
     width: 80%;
-  }
-  input[type="text"] {
-    border: none;
+}
+
+input[type="text"] {
+    border: .0625rem solid white;
     outline: none;
     font-size: 16px;
     width: 100%;
     height: 1.875rem;
     border-radius: .625rem;
-  }
-  /* footer */
-  
+}
+
+.icons_footer {
+    color: #6b7376;
+}
+
+/* footer */
+
 /* Main right */
 /* -------------------------------------------------------------------- */
