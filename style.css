@@ -52,6 +52,10 @@ body {
 .paddingright-5{
     padding-right: 5px;
 }
+a{
+    color: #729da4;
+    font-size: 14px;
+}
 /* Common */
 /* -------------------------------------------------------------------- */
 /* Sidebar */
@@ -101,8 +105,8 @@ body {
 }
 
 .container_btn {
-    width: 10%;
-    margin-left: .9375rem;
+    width: 20%;
+    
 
 }
 
@@ -110,17 +114,15 @@ body {
     border: none;
     outline: none;
     font-size: 16px;
-    width: 1.875rem;
-    height: 1.875rem;
-    border-radius: .625rem;
+    width: 60px;
+    height: 31px;
     border: 1px solid lightgray;
     background-color: #fafafa;
 }
 
 .input_header {
-    width: 80%;
+    width: 75%;
     border: 1px solid lightgray;
-    border-radius: .625rem;
 }
 .container_utente{
     display: flex;
@@ -184,7 +186,7 @@ input[type="text"] {
     font-size: 16px;
     width: 100%;
     height: 1.875rem;
-    border-radius: .625rem;
+    border-radius: 5px;
 }
 
 .icons_footer {
