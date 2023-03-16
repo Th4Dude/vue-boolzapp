@@ -62,17 +62,19 @@
                     </div>
                 </div>
                 <div v-for="contacts" class="container_contacts">
-                    <div class="container_utente">
+                    <div v-for="(contact, index) in contacts" class="container_utente ">
                         <div class="utente">
                             <div>
                                 <img class="img" src="img/avatar_2.jpg" alt="">
                             </div>
                             <div>
-                                <h4>The dude</h4>
+                                <h4>{{contact.name}}</h4>
                                 <h6>Ultimo messaggio invitato</h6>
                             </div>
                         </div>
-                        <div><h6>12.00</h6></div>
+                        <div>
+                            <h6>12.00</h6>
+                        </div>
                     </div>
                 </div>
             </div>
