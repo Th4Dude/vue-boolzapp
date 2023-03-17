@@ -14,7 +14,6 @@ body {
     overflow: hidden;
     background-color: #159588;
     background-image: linear-gradient(180deg, #159588 0%, #d3dbdb 33%, #d3dbdb 66%, #d3dbdb 100%);
-    
 }
 
 .container {
@@ -33,7 +32,6 @@ body {
 .justify-content-spacebetween {
     display: flex;
     justify-content: space-between;
-
 }
 
 .justify-content-spacearound {
@@ -46,16 +44,24 @@ body {
     width: 50px;
     border-radius: 50px;
 }
-.paddingleft-5{
+
+.paddingleft-5 {
     padding-left: 5px;
 }
-.paddingright-5{
+
+.paddingright-5 {
     padding-right: 5px;
 }
-a{
+
+a {
     color: #729da4;
     font-size: 14px;
 }
+
+.color_grey {
+    color: #729da4;
+}
+
 /* Common */
 /* -------------------------------------------------------------------- */
 /* Sidebar */
@@ -98,7 +104,7 @@ a{
 
 .container_bell {
     background-color: #fafafa;
-    color:  #91dafa;
+    color: #91dafa;
     height: 40px;
     width: 40px;
     border-radius: 50px;
@@ -106,8 +112,6 @@ a{
 
 .container_btn {
     width: 20%;
-    
-
 }
 
 .btn {
@@ -124,13 +128,15 @@ a{
     width: 75%;
     border: 1px solid lightgray;
 }
-.container_utente{
+
+.container_utente {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
 }
-.utente{
+
+.utente {
     display: flex;
     align-items: center;
 }
@@ -170,9 +176,46 @@ a{
 
 /* header main */
 
+/* Sms */
 
+.container_main_msg ul {
+    padding-top: 10px;
+}
 
+.container_main_msg li {
+    margin-bottom: 10px;
+}
 
+.inviato {
+    display: flex;
+    padding-left: 70px;
+}
+
+.ricevuto {
+    display: flex;
+    justify-content: right;
+    padding-right: 70px;
+}
+
+.ricevuto div {
+    background-color: #d6f8bc;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.inviato div {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.orario {
+    font-size: 12px;
+    color: #a0a0a0;
+    padding-left: 5px;
+}
+
+/* Sms */
 
 /* footer */
 
