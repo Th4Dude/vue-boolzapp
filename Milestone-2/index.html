@@ -94,7 +94,7 @@
                 <!-- Contacts -->
 
                 <div class="container_contacts">
-                    <div v-for="(contact, index) in contacts" class="container_utente ">
+                    <div v-for="(contact, index) in contacts" @click="utentesms(index)" class="container_utente ">
                         <div class="utente">
                             <div>
                                 <img class="img" v-bind:src="contact['avatar']" alt="">
@@ -125,10 +125,10 @@
                 <div class="main_header justify-content-spacebetween">
                     <div class="flex ">
                         <div>
-                            <img class="img" src="img/avatar_1.jpg" alt="">
+                            <img class="img" v-bind:src="contacts[utente].avatar" alt="">
                         </div>
                         <div>
-                            <h4>PincoPallino</h4>
+                            <h4>{{contacts[utente].name }}</h4>
                             <h6 class="color_grey">ultimo accesso oggi alle 12.00</h6>
                         </div>
                     </div>
@@ -144,25 +144,11 @@
                 <!-- Sms -->
 
                 <div class="container_main_msg">
-                    <ul>
-                        <li class="ricevuto">
-                            <div class="flex">
-                                <p>Sei andato in barca?</p>
-                                <span class="orario">12:00</span>
-                            </div>
-                        </li>
-                        <li class="ricevuto">
-                            <div class="flex">
-                                <p>Ricordati di non affogare!</p>
-                                <span class="orario">12:05</span>
-                            </div>
-                        </li>
-                        <li class="inviato">
-                            <div class="flex">
-                                <p>Tutto bene!</p>
-                                <span class="orario">12:10</span>
-                            </div>
-                        </li>
+                    <ul v-for="(sms, index) in contacts[utente].messages" v-bind:class="ricevutoMessaggio(index)">
+                        <div class="flex">
+                            <p>{{sms.message}}</p>
+                            <span class="orario">12:00</span>
+                        </div>
                     </ul>
                 </div>
 

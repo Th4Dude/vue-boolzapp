@@ -163,6 +163,7 @@ a {
 .container_main_msg {
     background-image: url(img/mine.jpg);
     height: calc(100% - 120px);
+    overflow: scroll;
 }
 
 .footer {
@@ -193,22 +194,25 @@ a {
 .inviato {
     display: flex;
     padding-left: 90px;
+    list-style: none;
 }
 
 .ricevuto {
     display: flex;
     justify-content: right;
     padding-right: 90px;
+    list-style: none;
 }
 
 .ricevuto div {
-    background-color: #d6f8bc;
+    background-color: white;
     padding: 10px;
     border-radius: 10px;
 }
 
 .inviato div {
-    background-color: white;
+    
+    background-color: #d6f8bc;
     padding: 10px;
     border-radius: 10px;
 }

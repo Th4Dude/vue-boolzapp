@@ -5,7 +5,9 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        utente : 0,   
         contacts: [
+                
             {
                 name: 'Michele',
                 avatar: './img/avatar_1.jpg',
@@ -174,12 +176,12 @@ const { createApp } = Vue
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
-                        message: 'Lo sai che ha aperto una nuova pizzeria?',
+                        message: 'ciao',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:50:00',
-                        message: 'Si, ma preferirei andare al cinema',
+                        message: 'ciao, come stai?',
                         status: 'received'
                     }
                 ],
@@ -191,12 +193,12 @@ const { createApp } = Vue
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
-                        message: 'Lo sai che ha aperto una nuova pizzeria?',
+                        message: 'Voglio andare in barca',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:50:00',
-                        message: 'Si, ma preferirei andare al cinema',
+                        message: 'Si, ma voglio anche dormire!',
                         status: 'received'
                     }
                 ],
@@ -208,7 +210,7 @@ const { createApp } = Vue
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
-                        message: 'Lo sai che ha aperto una nuova pizzeria?',
+                        message: 'Vuoi andare al ristorante?',
                         status: 'sent'
                     },
                     {
@@ -220,5 +222,18 @@ const { createApp } = Vue
             },
         ]
       }
+    },
+    methods: {
+        ricevutoMessaggio(index) {
+            console.log(this.ricevutoMessaggio)
+
+            if (this.contacts[this.utente].messages[index].status === 'received') {
+                return 'ricevuto'
+            }
+            return 'inviato'
+        },
+        utentesms(index) {
+            this.utente = index
+        }
     }
   }).mount('#app')
