@@ -21,7 +21,10 @@
 <body>
 
     <!-- Vue Box -->
+    
     <div id="app">
+
+        <!-- Container -->
 
         <div class="container">
 
@@ -29,6 +32,9 @@
 
             <div class="sidebar">
                 <div class="header_sidebar">
+
+                    <!-- Profile user -->
+
                     <div class="container_profile flex  justify-content-spacebetween">
                         <div class="flex">
                             <div>
@@ -44,24 +50,41 @@
                             <span class="paddingleft-5"><i class="fa-solid fa-ellipsis-vertical"></i></span>
                         </div>
                     </div>
+
+                    <!-- Profile user -->
+
+                    <!-- Notification -->
+
                     <div class="container_img_notification">
                         <div class="container_bell flex"><i class="fa-solid fa-bell-slash"></i></div>
-                        <div>
+                        <div class="paddingleft-5">
                             <h5>Ricevi notifiche di nuovi messaggi</h5>
                             <a href="">Attiva notifiche desktop</a>
                         </div>
                     </div>
+
+                    <!-- Notification -->
+
+                    <!-- Input -->
+
                     <div class="container_input flex">
-
-                        <div class="container_btn flex "><button class="btn"><i
-                                    class="fa-solid fa-magnifying-glass"></i></button></div>
-
+                        <div class="container_btn flex ">
+                            <button class="btn">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
                         <div class="input_header">
                             <input type="text" placeholder="Cerca o inizia una nuova chat">
                         </div>
                     </div>
+
+                    <!-- Input -->
+
                 </div>
-                <div v-for="contacts" class="container_contacts">
+
+                <!-- Contacts -->
+
+                <div class="container_contacts">
                     <div v-for="(contact, index) in contacts" class="container_utente ">
                         <div class="utente">
                             <div>
@@ -77,6 +100,9 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Contacts -->
+
             </div>
 
             <!-- Sidebar -->
@@ -84,25 +110,56 @@
             <!-- Main right -->
 
             <div class="main-content">
+
+                <!-- Main header -->
+
                 <div class="main_header justify-content-spacebetween">
                     <div class="flex ">
                         <div>
-                            <img class="img" src="img/avatar_2.jpg" alt="">
+                            <img class="img" src="img/avatar_1.jpg" alt="">
                         </div>
                         <div>
                             <h4>PincoPallino</h4>
+                            <h6 class="color_grey">ultimo accesso oggi alle 12.00</h6>
                         </div>
                     </div>
                     <div class="flex  justify-content-spacebetween icons_right">
                         <span><i class="fa-solid fa-magnifying-glass"></i></span>
                         <span><i class="fa-solid fa-paperclip"></i></span>
                         <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
-
                     </div>
                 </div>
+
+                <!-- Main header -->
+
+                <!-- Sms -->
+
                 <div class="container_main_msg">
-                    <h1>messaggi</h1>
+                    <ul>
+                        <li class="ricevuto">
+                            <div class="flex">
+                                <p>Sei andato in barca?</p>
+                                <span class="orario">12:00</span>
+                            </div>
+                        </li>
+                        <li class="ricevuto">
+                            <div class="flex">
+                                <p>Ricordati di non affogare!</p>
+                                <span class="orario">12:05</span>
+                            </div>
+                        </li>
+                        <li class="inviato">
+                            <div class="flex">
+                                <p>Tutto bene!</p>
+                                <span class="orario">12:10</span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
+
+                <!-- Sms -->
+
+                <!-- Footer -->
 
                 <div class="footer flex justify-content-spacearound  ">
                     <div class="icons_footer">
@@ -114,19 +171,20 @@
                     <div class="icons_footer">
                         <span><i class="fa-solid fa-microphone"></i></span>
                     </div>
-
                 </div>
+
+                <!-- Footer -->
+
             </div>
 
             <!-- Main right -->
 
         </div>
+
+        <!-- Container -->
+
     </div>
     <!-- Vue Box -->
-
-
-
-
 
     <!-- Vue -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
