@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fontawesome -->
+
+
+    <!-- Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <!-- Font -->
+
+    <!-- Stylecss -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Stylecss -->
+</head>
+
+<body>
+
+    <!-- Vue Box -->
+
+    <div id="app">
+
+        <!-- Container -->
+
+        <div class="container">
+
+            <!-- Sidebar -->
+
+            <div class="sidebar">
+                <div class="header_sidebar">
+
+                    <!-- Profile user -->
+
+                    <div class="container_profile flex  justify-content-spacebetween">
+                        <div class="flex">
+                            <div>
+                                <img class="img" src="img/avatar_2.jpg" alt="">
+                            </div>
+                            <div>
+                                <h4>The dude</h4>
+                            </div>
+                        </div>
+                        <div class="flex  justify-content-spacebetween icons">
+                            <span class="paddingleft-5"><i class="fa-solid fa-circle-notch"></i></span>
+                            <span class="paddingleft-5"><i class="fa-solid fa-message"></i></span>
+                            <span class="paddingleft-5"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Profile user -->
+
+                    <!-- Notification -->
+
+                    <div class="container_img_notification">
+                        <div class="container_bell flex"><i class="fa-solid fa-bell-slash"></i></div>
+                        <div class="paddingleft-5">
+                            <h5>Ricevi notifiche di nuovi messaggi</h5>
+                            <a href="https://faq.whatsapp.com/668538004658079/?cms_platform=web">Attiva notifiche desktop</a>
+                        </div>
+                    </div>
+
+                    <!-- Notification -->
+
+                    <!-- Input -->
+
+                    <div class="container_input flex">
+                        <div class="container_btn flex ">
+                            <button class="btn">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                        <div class="input_header">
+                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        </div>
+                    </div>
+
+                    <!-- Input -->
+
+                </div>
+
+                <!-- Contacts -->
+
+                <div class="container_contacts">
+                    <div v-for="(contact, index) in contacts" @click="utentesms(index)" class="container_utente ">
+                        <div class="utente">
+                            <div>
+                                <img class="img" v-bind:src="contact['avatar']" alt="">
+                            </div>
+                            <div>
+                                <h4>{{contact.name}}</h4>
+                                <h6>Ultimo messaggio invitato</h6>
+                            </div>
+                        </div>
+                        <div>
+                            <h6>12.00</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contacts -->
+
+            </div>
+
+            <!-- Sidebar -->
+
+            <!-- Main right -->
+
+            <div class="main-content">
+
+                <!-- Main header -->
+
+                <div class="main_header justify-content-spacebetween">
+                    <div class="flex ">
+                        <div>
+                            <img class="img" v-bind:src="contacts[utente].avatar" alt="">
+                        </div>
+                        <div>
+                            <h4>{{contacts[utente].name }}</h4>
+                            <h6 class="color_grey">ultimo accesso oggi alle 12.00</h6>
+                        </div>
+                    </div>
+                    <div class="flex  justify-content-spacebetween icons_right">
+                        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <span><i class="fa-solid fa-paperclip"></i></span>
+                        <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                    </div>
+                </div>
+
+                <!-- Main header -->
+
+                <!-- Sms -->
+
+                <div class="container_main_msg">
+                    <ul v-for="(sms, index) in contacts[utente].messages" v-bind:class="ricevutoMessaggio(index)">
+                        <div class="flex">
+                            <p>{{sms.message}}</p>
+                            <span class="orario">12:00</span>
+                        </div>
+                    </ul>
+                </div>
+
+                <!-- Sms -->
+
+                <!-- Footer -->
+
+                <div class="footer flex justify-content-spacearound  ">
+                    <div class="icons_footer">
+                        <span><i class="fa-regular fa-face-smile"></i></span>
+                    </div>
+                    <div class="input_footer">
+                        <input type="text" placeholder="Scrivi un messaggio">
+                    </div>
+                    <div class="icons_footer">
+                        <span><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+
+            </div>
+
+            <!-- Main right -->
+
+        </div>
+
+        <!-- Container -->
+
+    </div>
+    <!-- Vue Box -->
+
+    <!-- Vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Vue -->
+
+    <!-- Js -->
+    <script src="js/main.js"></script>
+    <!-- Js -->
+</body>
+
+</html>
