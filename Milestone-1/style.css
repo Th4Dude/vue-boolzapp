@@ -188,13 +188,13 @@ a {
 
 .inviato {
     display: flex;
-    padding-left: 70px;
+    padding-left: 90px;
 }
 
 .ricevuto {
     display: flex;
     justify-content: right;
-    padding-right: 70px;
+    padding-right: 90px;
 }
 
 .ricevuto div {
