@@ -226,7 +226,6 @@ const { createApp } = Vue
     methods: {
         ricevutoMessaggio(index) {
             console.log(this.ricevutoMessaggio)
-
             if (this.contacts[this.utente].messages[index].status === 'received') {
                 return 'ricevuto'
             }
