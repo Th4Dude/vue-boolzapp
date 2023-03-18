@@ -8,7 +8,6 @@ const { createApp } = Vue
         utente : 0,  
         nuovoMessaggio : '', 
         contacts: [
-                
             {
                 name: 'Michele',
                 avatar: './img/avatar_1.jpg',
@@ -26,23 +25,23 @@ const { createApp } = Vue
                     },
                     {
                         date: '10/01/2020 16:15:22',
-                        message: 'Tutto fatto!',
+                        message: 'no!',
                         status: 'received'
                     },
                     {
                         date: '10/01/2020 16:15:22',
-                        message: 'Tutto fatto!',
+                        message: 'che significa!?',
+                        status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 16:15:22',
+                        message: 'Che non voglio fare nulla!',
                         status: 'received'
                     },
                     {
                         date: '10/01/2020 16:15:22',
-                        message: 'Tutto fatto!',
-                        status: 'received'
-                    },
-                    {
-                        date: '10/01/2020 16:15:22',
-                        message: 'Tutto fatto!',
-                        status: 'received'
+                        message: 'bene!',
+                        status: 'sent'
                     }
                 ],
             },
@@ -240,6 +239,9 @@ const { createApp } = Vue
       }
     },
     methods: {
+
+        /* sms ricevuto inviato */
+
         ricevutoMessaggio(index) {
             console.log(this.ricevutoMessaggio)
             if (this.contacts[this.utente].messages[index].status === 'received') {
@@ -250,9 +252,13 @@ const { createApp } = Vue
         utentesms(index) {
             this.utente = index
         },
-        
+
+        /* sms ricevuto inviato */
+
         invioNuovoMessaggio(index) {
             console.log(this.invioNuovoMessaggio)
+
+            /* sms push nel dom */
 
             if (this.nuovoMessaggio.trim() !== '') {
                 const inviato = {
@@ -260,10 +266,21 @@ const { createApp } = Vue
                     status: 'sent'
                 };
                 this.contacts[index].messages.push(inviato);
-            }
+
+                /* Timer 1 sec */
+
+                setTimeout(() => {
+                    const ricevuto = {
+                        message: 'Ok!',
+                        status: 'received'
+                    };
+                    this.contacts[index].messages.push(ricevuto);
+                }, 1000);
+
+            }   /* Timer 1 sec */
+
             this.nuovoMessaggio = '';
         }
     }
-
 }).mount('#app')
        
