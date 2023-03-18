@@ -5,7 +5,8 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        utente : 0,   
+        utente : 0,  
+        nuovoMessaggio : '', 
         contacts: [
                 
             {
@@ -22,6 +23,21 @@ const { createApp } = Vue
                         date: '10/01/2020 15:50:00',
                         message: 'Ricordati di stendere i panni',
                         status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 16:15:22',
+                        message: 'Tutto fatto!',
+                        status: 'received'
+                    },
+                    {
+                        date: '10/01/2020 16:15:22',
+                        message: 'Tutto fatto!',
+                        status: 'received'
+                    },
+                    {
+                        date: '10/01/2020 16:15:22',
+                        message: 'Tutto fatto!',
+                        status: 'received'
                     },
                     {
                         date: '10/01/2020 16:15:22',
@@ -188,7 +204,7 @@ const { createApp } = Vue
             },
             {
                 name: 'Marco',
-                avatar: './img/avatar_4.jpg',
+                avatar: './img/avatar_7.jpg',
                 visible: true,
                 messages: [
                     {
@@ -205,7 +221,7 @@ const { createApp } = Vue
             },
             {
                 name: 'Tonino',
-                avatar: './img/avatar_4.jpg',
+                avatar: './img/avatar_5.jpg',
                 visible: true,
                 messages: [
                     {
@@ -233,6 +249,21 @@ const { createApp } = Vue
         },
         utentesms(index) {
             this.utente = index
+        },
+        
+        invioNuovoMessaggio(index) {
+            console.log(this.invioNuovoMessaggio)
+
+            if (this.nuovoMessaggio.trim() !== '') {
+                const inviato = {
+                    message: this.nuovoMessaggio,
+                    status: 'sent'
+                };
+                this.contacts[index].messages.push(inviato);
+            }
+            this.nuovoMessaggio = '';
         }
     }
-  }).mount('#app')
+
+}).mount('#app')
+       

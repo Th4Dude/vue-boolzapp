@@ -161,7 +161,7 @@
                         <span><i class="fa-regular fa-face-smile"></i></span>
                     </div>
                     <div class="input_footer">
-                        <input type="text" placeholder="Scrivi un messaggio">
+                        <input type="text" @keyup.enter="invioNuovoMessaggio(utente)" v-model="nuovoMessaggio" placeholder="Scrivi un messaggio">
                     </div>
                     <div class="icons_footer">
                         <span><i class="fa-solid fa-microphone"></i></span>
@@ -191,3 +191,7 @@
 </body>
 
 </html>
+
+
+
+<!-- <input type="text" placeholder="Scrivi un messaggio" class="f-grow1" v-model="messageText" v-on:keyup.enter="sendNewMessage()"> -->
