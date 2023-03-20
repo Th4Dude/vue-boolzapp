@@ -7,6 +7,7 @@ const { createApp } = Vue
       return {
         utente : 0,  
         nuovoMessaggio : '', 
+        searchUser : '',
         contacts: [
             {
                 name: 'Michele',
@@ -280,7 +281,14 @@ const { createApp } = Vue
             }   /* Timer 1 sec */
 
             this.nuovoMessaggio = '';
+        },
+        cerca(){            
+            if(this.searchUser.trim() !== ''){
+                return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.searchUser.toLowerCase()))
+            } else {
+                return this.contacts
+            }
         }
     }
-}).mount('#app')
+    }).mount('#app')
        

@@ -83,7 +83,7 @@
                             </button>
                         </div>
                         <div class="input_header">
-                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                            <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchUser" @keyup="cerca">
                         </div>
                     </div>
 
@@ -94,7 +94,7 @@
                 <!-- Contacts -->
 
                 <div class="container_contacts">
-                    <div v-for="(contact, index) in contacts" @click="utentesms(index)" class="container_utente ">
+                    <div v-for="(contact, index) in cerca()" @click="utentesms(index)" class="container_utente ">
                         <div class="utente">
                             <div>
                                 <img class="img" v-bind:src="contact['avatar']" alt="">
